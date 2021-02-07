@@ -1,6 +1,5 @@
-//: Exception Handling
-// Error is a protocol hence can implemented by struct enum class
-
+//: **Exception Handling**
+//: Error is a protocol hence can implemented by struct enum class
 import Foundation
 
 enum HTTPError : Int,  LocalizedError {
@@ -17,7 +16,7 @@ enum HTTPError : Int,  LocalizedError {
     }
 }
 
-// functions can throw error
+//: **functions can throw error**
 func someFuncThatCanThrowError() throws -> String {
     throw HTTPError.NotFound
 }

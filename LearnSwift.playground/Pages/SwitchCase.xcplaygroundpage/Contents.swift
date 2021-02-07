@@ -1,12 +1,12 @@
 //: [Previous](@previous)
-
-//Notes ::
-// Default is compulsory in swift fall through
-// No break needed
-// multiple values can be matched using comma calles as compound cases
-// can match patterns i.e alphanumeric, intervals(range operators), value bindings, tuples.
-// cases can have where clause
-// empty cases are not allowed in swift and hence break can be used
+//:
+//: **Notes :-**
+//: * Default is compulsory in swift fall through
+//: * No break needed
+//: * multiple values can be matched using comma called as compound cases
+//: * can match patterns i.e alphanumeric, intervals(range operators), value bindings, tuples.
+//: * cases can have where clause
+//: * empty cases are not allowed in swift and hence break can be used
 
 import Foundation
 
@@ -54,7 +54,7 @@ default:
     print("X is \(axis.0) and Y is \(axis.1)")
 }
 
-//Compound cases
+//: Compound cases
 let alphabet = "a"
 switch alphabet {
 case "a", "e", "i", "o", "u":
