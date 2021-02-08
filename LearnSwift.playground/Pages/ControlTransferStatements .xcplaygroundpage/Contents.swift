@@ -23,7 +23,7 @@ for i in 1...10 {
 
 //: Fall through 
 //: * code below the case will be executed WITHOUT the case being matched
-//: * 'NOTE' : The fallthrough keyword does not causes to check the case conditions for the next switch case. The fallthrough keyword simply causes code execution to move directly to the statements inside the next case (or default case) block, as in C’s standard switch statement behavior.
+//: * 'NOTE' : The fallthrough keyword does not causes to check the case conditions for the next switch case. The fallthrough keyword simply causes code execution to move directly to the statements inside the next case (or default case) block, as in C’s standard switch statement behavior. C has break statement which causes the switch statement to break, what if you dont put break, this samr functionality is achieved using fallthrough. 
 let axis = (5, 10)
 switch axis {
 case ( let x, let y) where y == 10:
