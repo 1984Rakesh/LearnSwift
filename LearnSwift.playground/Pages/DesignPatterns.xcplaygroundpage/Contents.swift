@@ -1,7 +1,11 @@
-//: [Previous](@previous)
+//: **Singletone** :-
+//:
+class SomeClass {
+    static let manager : SomeClass = SomeClass()
+    
+    func printDescription() {
+        print("Hello!!")
+    }
+}
 
-import Foundation
-
-var str = "Hello, playground"
-
-//: [Next](@next)
+SomeClass.manager.printDescription()
