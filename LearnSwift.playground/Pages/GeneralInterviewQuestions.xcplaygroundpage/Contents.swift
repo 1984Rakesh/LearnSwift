@@ -33,7 +33,7 @@
 //:
 //: **Desing Patters :-**
 //: 1. Explain Factory method ? difference between factory and abstract factory ?
-//: 2. [Singelton](DesignPatterns) in swift ? pure singleton ? you should not be able to create another instance of that class. Sample
+//: 2. [Singelton](CreationalDesignPatterns) in swift ? pure singleton ? you should not be able to create another instance of that class. Sample
 //: 3. explain M-V-VM in details ?
 //: 4. explain VIPER in details ?
 //: 5. What logic will go where w.r.t M-V-VM ? two textfield one for username the other for password and on button ? validation on password field ? on click of button authroisation of user with api call? what will go where with the architecture of the system? [Refere M-V-VM](MVVM)
