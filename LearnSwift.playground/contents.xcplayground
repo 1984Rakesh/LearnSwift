@@ -17,5 +17,6 @@
         <page name='CreationalDesignPatterns'/>
         <page name='Properties'/>
         <page name='InitDeinit'/>
+        <page name='Lens'/>
     </pages>
 </playground>
