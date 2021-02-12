@@ -16,5 +16,6 @@
         <page name='MVVM'/>
         <page name='CreationalDesignPatterns'/>
         <page name='Properties'/>
+        <page name='InitDeinit'/>
     </pages>
 </playground>
