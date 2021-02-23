@@ -18,5 +18,6 @@
         <page name='Properties'/>
         <page name='InitDeinit'/>
         <page name='Codable'/>
+        <page name='Equatable'/>
     </pages>
 </playground>
