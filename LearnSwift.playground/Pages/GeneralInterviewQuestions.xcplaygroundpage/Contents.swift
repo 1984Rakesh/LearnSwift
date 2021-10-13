@@ -20,15 +20,19 @@
 //:
 //: **CoreData :-**
 //: 1. What is nullifier rule in CoreData ?
-//: 2. CoreData CodeGen types ? Manual, Class, Categories ?
+//: 2. CoreData CodeGen types ?
+//: - Manual :
+//: - Class :
+//: - Categories :
 //: 3. Passing NSManagedObject from one NSManagedObjectContext to another ?
+//: - NSManagedObject from one NSManagedObjectContext is loaded into another by loading NSManagedObject with ID.
 //: 4. CoreData migration from one data-model to another?
 //:
 //: **Networking :-**
 //: 1. Different configuration available in NSURLSession ?
 //: - Default
 //: - Ephemeral
-//: - Background 
+//: - Background
 //: 2. Networking ? Authorisation ?
 //: 3. What is O-Auth ?
 //: 4. How does single sign on work?
@@ -39,22 +43,41 @@
 //: 1. Fabric/Crashlytics ? logging of state before crash ?
 //:
 //: **Swift :-**
-//: 1. Classes VS Struct ? Reference type vs value type ? when to use what ?
+//: 1. Classes VS Struct ?
+//:     - Classes are reference types and Struct is value type.
+//:     - Both support functions.
+//:     - Classes can inherit from another class.
+//:     - Both have init method but only classes have deinit method.
 //: 2. Different collection types in swift ?
 //: 3. Difference between guard and if let ?
-//: 4. Filter, Map, Reduce, flatmap function ? these are higher order functions as well ? explain with example ?
-//: 5. Open vs public explain more in details, access specifiers ? Performance Impact? look at dynamic method dispatch...
+//:     - `guard [condition] else { [exit/return] }` if the condition fails the code block is executed also the code block must have return.
+//:     - `if let { code block } code block` is executed if object can be unwrapped.
+//: 4. What are higher order functions? give some examples?
+//:     - Higher order functions are functions that take other functions as parameters or those that return other function
+//:     e.g map, flatmap, reduce
+//: 5. What are different access specifiers? what are their performance implications?
+//:     - __open__ : classes/structs are accessible outside the give module and they can be extended.
+//:     - __public__ : classes/struct are accessible outside the given module but cannot be extended.
+//:     - __internal__ : this is default specifier if no other specifier is specified. classes/struct can be accessed only in given module and can be extended.
+//:     - __fileprivate__ : classes/struct can be accessed only in the current file and can be extended.
+//:     - __private__ : classes/struct can be accessed only in current scope.
 //: 6. what is static ? what are the draw backs of static ? what is the difference between class and static ?
+//:     - Both `static` and `class` attributes can applied to both properties and method.
+//:     - They are associated with the class.
+//:     - class methods can be overridden by sub classes.
 //: 7. what is the difference between objective-c and swift protocol/structs/enums/classes?
 //: 8. Can you have variable declaration in extension of protocol ? No, extension cannot contain stored properties be it struct, class, enum or protocol, but can have computed properties
-//: 9. escaping vs non escaping closures in swift ? explain with example ?
+//: 9. What are closures? explain escaping vs non escaping closures in swift ? explain with example ?
 //: 10. Generics explain them with explain ? swap function ?
-//: 11. What are optional variable is swift how would you avoid crash using optional variables ?
+//: 12. What are optional variable is swift? What is type of optional variables ? how would you avoid crash using optional variables ? how to unwrap optional variables?
+//:     - Optional variable in swift will either hold a value or nil
+//:     - Optional is an enum type `Optional<ValueType>` with two cases `.none` and `.some(value)`
+//:     - `var number: Int?` is same as `var number: Optional<Int>`
+//:     - optionals can be unwrapped using, forced unwrapped(`!`), nil coalescing operator(`??`), optional chaining,`if let` statement
 //: 12. Enum what is difference between raw value and associated value ?
 //: 13. Swift Package manager ?
 //: 14. Can enumerations contain enumerations as case ? Yes, using indirect keyword and Associated value check [enumerations](Enumerations)
 //: 15. Leverage Protocol Oriented Programming to OOPS ?
-//: 16. What is the type of optional?
 //: 17. Higher order functions? examples ?
 //: 18. Initialisers in swift? designated vs convenience ?
 //: 19. Method dispatch in swift?
