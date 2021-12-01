@@ -40,7 +40,7 @@ case .error(let code):
     print("\(code)")
 }
 
-//: **Recursive enumeration** :- enumeration can contain enerations as case which is indicated by the indirect keywod
+//: **Recursive enumeration** :- enumeration can contain enumerations as case which is indicated by the indirect keyword
 enum HTTPErrorCodes : Int {
     case notFound = 202
 }

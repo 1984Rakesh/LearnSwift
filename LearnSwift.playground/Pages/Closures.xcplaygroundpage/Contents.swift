@@ -24,7 +24,7 @@ sortedNames = names.sorted(by: > )
 //: Trailing closure, since closure is the last param here it can be simply written after the function paramters out side of the ()
 sortedNames = names.sorted{ $0 < $1 }
 //: *Intresting* example of closure capturing surrounding value
-//: * this example is surely hard to grasp.. in the exapmle below runningAmount and incrementAmount are not a part to increment function since they are refered by the increment function the are captured by reference
+//: * this example is surely hard to grasp.. in the example below runningAmount and incrementAmount are not a part to increment function since they are referred by the increment function the are captured by reference
 func makeIncrement(by incrementAmount:Int) -> ()-> Int {
     var runningAmount = 0
     func increment() -> Int {
@@ -42,12 +42,12 @@ increment()
 let increment7 = makeIncrement(by: 7)
 increment7()
 increment7()
-//: Closures are reference type, both incrementBy10 and increment are refering to the same object
+//: Closures are reference type, both incrementBy10 and increment are referring to the same object
 let incrementBy10 = increment
 incrementBy10()
 increment()
 //: **Escaping closure**
-//: * a closure is passed as a parmeter to the function but the closure is called after the function returns
+//: * a closure is passed as a parameter to the function but the closure is called after the function returns
 //: * e.g. completionBlocks
 //: * closures are marked with @escaping
 //: * capturing self in escaping closure causes a strong reference to self
@@ -82,7 +82,7 @@ myClass.createClosures()
 completionHandlers.first?()
 
 //: **Autoclosure**
-//: below the function needs a closure as parameter but is marked as @autoclosure, hence in the function class only the staement is passed the complier automatically create a closure for the given statement
+//: below the function needs a closure as parameter but is marked as @autoclosure, hence in the function class only the statement is passed the complier automatically create a closure for the given statement
 func someClosure(closure: @autoclosure ()-> String ){
     closure()
 }

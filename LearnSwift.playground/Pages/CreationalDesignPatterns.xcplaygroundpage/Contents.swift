@@ -6,8 +6,10 @@
 //: * let someClass = SomeClass() wont work since init is private
 //: * Hence only one instance of the class can be created
 //: * Making the init method optional will also make the manager property optional.Which will not work since we want only one instance of class
+import Foundation
+
 class SomeClass {
-    static let manager : SomeClass = SomeClass()
+    static let manager: SomeClass = SomeClass()
     
     private init(){
     }
@@ -16,7 +18,32 @@ class SomeClass {
         print("Hello!!")
     }
 }
+
 SomeClass.manager.printDescription()
+
+//: **Thread Safety**
+//: Thread safety in singleton can be achieved by using DispatchGroup and barriers
+class SomeOtherClass {
+    static let manager: SomeOtherClass = SomeOtherClass()
+    private let internalQueue = DispatchQueue(label: "SomeOtherClassqueue",
+                                              qos: .default,
+                                              attributes: .concurrent)
+    var _someProperty: Int?
+    var someProperty: Int? {
+        get {
+            return internalQueue.sync {
+                _someProperty
+            }
+        }
+        set {
+            internalQueue.sync(flags: .barrier) {
+                self._someProperty = newValue
+            }
+        }
+    }
+}
+
+
 
 /*:
  **Abstract Factory :-**
